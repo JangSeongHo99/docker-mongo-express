@@ -1,4 +1,4 @@
-db.auth('root', 'witcar@700')
+db.auth('root', 'witcar700')
 
 db = db.getSiblingDB('test')
 
@@ -8,17 +8,21 @@ db.createUser(
         pwd: "1q2w3e4r",
         roles: [
             {
+                role: 'root',
+                db: 'test'
+            }
+ /*        {
                 "role" : "userAdminAnyDatabase",
-                "db" : "admin"
+                "db" : "test"
             },
             {
                 "role" : "dbAdminAnyDatabase",
-                "db" : "admin"
+                "db" : "test"
             },
             {
                 "role" : "readWriteAnyDatabase",
-                "db" : "admin"
+                "db" : "test"
             }
-        ]
+        */        ]
     }
 );
